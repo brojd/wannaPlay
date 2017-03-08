@@ -11,6 +11,10 @@ class AllEventsContainer extends Component {
   constructor() {
     super();
   }
+
+  componentDidMount() {
+    console.log(window.FB);
+  }
   
   render() {
     return (

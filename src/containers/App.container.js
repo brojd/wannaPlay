@@ -2,8 +2,11 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getFbSdkReady } from '../selectors/facebook';
+import { injectFbSdk } from '../actions/async';
 
 type Props = {
+  children: any
 }
 
 class AppContainer extends Component {
@@ -12,14 +15,14 @@ class AppContainer extends Component {
     super();
   }
 
-  componentWillMount() {
-    debugger;
+  componentDidMount() {
+    this.props.injectFbSdk();
   }
 
   render() {
     return (
       <div>
-        {this.props.children}
+        {this.props.fbSdkReady ? this.props.children : 'loading'}
       </div>
     )
   }
@@ -27,10 +30,12 @@ class AppContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    fbSdkReady: getFbSdkReady(state)
   }
 };
 
 const mapDispatchToProps = {
+  injectFbSdk
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

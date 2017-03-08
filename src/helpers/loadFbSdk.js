@@ -1,6 +1,6 @@
 import { FB_APP_ID } from '../config';
 
-const loadFbSDK = () => {
+const loadFbSdk = () => {
   return new Promise((resolve, reject) => {
     window.fbAsyncInit = function() {
       window.FB.init({
@@ -9,7 +9,7 @@ const loadFbSDK = () => {
         version    : 'v2.8'
       });
       window.FB.AppEvents.logPageView();
-      resolve();
+      resolve('success');
     };
     (function(d, s, id){
       let js, fjs = d.getElementsByTagName(s)[0];
@@ -21,4 +21,4 @@ const loadFbSDK = () => {
   });
 };
 
-export default loadFbSDK;
+export default loadFbSdk;
