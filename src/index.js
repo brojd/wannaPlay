@@ -4,13 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { devToolsEnhancer  } from 'redux-devtools-extension';
 import routes from './routes';
-import todoApp from './reducers';
+import wannaPlayApp from './reducers';
 import './global_styles/index.css';
-import loadFbSDK from './helpers/loadFbSDK';
 
-let store = createStore(todoApp, devToolsEnhancer());
-
-loadFbSDK();
+let store = createStore(wannaPlayApp, devToolsEnhancer());
 
 ReactDOM.render(
   <Provider store={store}>

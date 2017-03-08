@@ -3,10 +3,10 @@ import games from './games';
 import users from './users';
 import places from './places';
 
-const todoApp = combineReducers({
+const wannaPlayApp = combineReducers({
   games,
   users,
   places
 });
 
-export default todoApp;
+export default wannaPlayApp;
