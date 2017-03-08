@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 type Props = {
 }
 
-class SearchOnLiContainer extends Component {
+class AllEventsContainer extends Component {
   
   constructor() {
     super();
@@ -15,7 +15,7 @@ class SearchOnLiContainer extends Component {
   render() {
     return (
       <div>
-        LinkedIn container
+         AllEvents container
       </div>
     )
   }
@@ -29,4 +29,4 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchOnLiContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AllEventsContainer);

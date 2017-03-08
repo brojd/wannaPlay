@@ -6,8 +6,11 @@ import { devToolsEnhancer  } from 'redux-devtools-extension';
 import routes from './routes';
 import todoApp from './reducers';
 import './global_styles/index.css';
+import loadFbSDK from './helpers/loadFbSDK';
 
 let store = createStore(todoApp, devToolsEnhancer());
+
+loadFbSDK();
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,15 +1,17 @@
 import React from 'react';
 import { IndexRoute, Router, Route, browserHistory } from 'react-router';
 import App from './components/App/App.component';
-import SearchOnFbContainer from './containers/SearchOnFbContainer.container';
-import SearchOnLiContainer from './containers/SearchOnLiContainer.container';
+import AllEventsContainer from './containers/AllEvents.container';
+import MyEventsContainer from './containers/MyEvents.container';
+import PlacesContainer from './containers/Places.container';
 import About from './components/About/About.component';
 
 const routes =
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={SearchOnFbContainer} />
-      <Route path='linkedin' component={SearchOnLiContainer} />
+      <IndexRoute component={AllEventsContainer} />
+      <Route path='myevents' component={MyEventsContainer} />
+      <Route path='places' component={PlacesContainer} />
       <Route path='about' component={About} />
     </Route>
   </Router>;
