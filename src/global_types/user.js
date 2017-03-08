@@ -4,3 +4,5 @@ declare type User = {
   surname: string,
   profileUrl: string
 };
+
+declare type Users = Array<User>;

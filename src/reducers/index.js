@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
-import todosFilter from './todosFilter';
+import games from './games';
+import users from './users';
+import places from './places';
 
 const todoApp = combineReducers({
-  todos,
-  todosFilter
+  games,
+  users,
+  places
 });
 
 export default todoApp;

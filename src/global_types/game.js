@@ -1,4 +1,4 @@
-declare type Event = {
+declare type Game = {
   _id: string,
   city: string,
   address: string,
@@ -9,3 +9,5 @@ declare type Event = {
   ownerId: string,
   participantIds: Array<string>
 };
+
+declare type Games = Array<Game>;

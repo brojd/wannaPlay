@@ -6,3 +6,5 @@ declare type Place = {
   description: string,
   prices: Array<string>
 };
+
+declare type Places = Array<Place>;
