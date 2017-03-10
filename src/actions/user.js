@@ -21,3 +21,11 @@ export const updateCurrentUser = (newUser: User): Object => {
     newUser: newUser
   }
 };
+
+const UPDATE_USER_PICTURE = 'UPDATE_USER_PICTURE';
+export const updateUserPicture = (newPictureUrl: string): Object => {
+  return {
+    type: UPDATE_USER_PICTURE,
+    newPictureUrl: newPictureUrl
+  }
+};

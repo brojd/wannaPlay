@@ -19,6 +19,8 @@ const currentUser = (state: State = initialState, action: Object): State => {
       return Object.assign({ ...state, loggedIn: false });
     case 'UPDATE_CURRENT_USER':
       return Object.assign({ ...state, ...action.newUser });
+    case 'UPDATE_USER_PICTURE':
+      return Object.assign({ ...state, imgUrl: action.newPictureUrl });
     default:
       return state;
   }

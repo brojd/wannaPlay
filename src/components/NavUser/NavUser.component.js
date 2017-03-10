@@ -12,6 +12,7 @@ type Props = {
 
 const NavUser = ({ imgUrl, name, surname }: Props) =>
   <span className="navbar-right">
+    <img src={imgUrl} alt='user_picture' className={styles.userPicture} />
     <span className="navbar-text">Hello {name} {surname}</span>
     <button className="btn btn-default navbar-btn">
       <Link to={'/logout'} className={styles.link} activeClassName={styles.activeLink}>Log out</Link>

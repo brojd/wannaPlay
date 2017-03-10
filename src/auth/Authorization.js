@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../selectors/users';
 import { logIn } from '../actions/user';
-import { saveUserInfo } from '../actions/async';
+import { saveUserInfo, saveUserPicture } from '../actions/async';
 import LogInRequest from '../components/LogInRequest/LogInRequest.component';
 import Loading from '../components/Loading/Loading.component';
 
@@ -13,7 +13,8 @@ const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
   type Props = {
     currentUser: User,
     logIn: Function,
-    saveUserInfo: Function
+    saveUserInfo: Function,
+    saveUserPicture: Function
   }
 
   type State = {
@@ -38,6 +39,7 @@ const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
       window.FB.login((res) => {
         if (res.status === 'connected') {
           this.props.saveUserInfo();
+          this.props.saveUserPicture();
           this.props.logIn();
         }
       })
@@ -76,7 +78,8 @@ const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
 
   const mapDispatchToProps = {
     logIn,
-    saveUserInfo
+    saveUserInfo,
+    saveUserPicture
   };
 
   return connect(mapStateToProps, mapDispatchToProps)(WithAuthorization);
