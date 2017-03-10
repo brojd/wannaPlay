@@ -1,6 +1,12 @@
+/* @flow */
+
 import React from 'react';
 
-const LogInRequest = ({ onLoginClick }) => {
+type Props = {
+  onLoginClick: Function
+}
+
+const LogInRequest = ({ onLoginClick }: Props) => {
 
   return (
     <div>

@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from 'react';
 import spinner from './spinner.gif';
 import styles from './Loading.stylesheet.css';

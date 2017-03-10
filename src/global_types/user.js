@@ -1,8 +1,9 @@
 declare type User = {
-  id: number,
+  id?: number,
   name: string,
   surname: string,
-  profileUrl: string
+  profileUrl: string,
+  loggedIn: boolean
 };
 
 declare type Users = Array<User>;

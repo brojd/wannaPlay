@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../selectors/users';
@@ -5,9 +7,22 @@ import { logIn } from '../actions/user';
 import LogInRequest from '../components/LogInRequest/LogInRequest.component';
 import Loading from '../components/Loading/Loading.component';
 
-const Authorization = WrappedComponent => {
+const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
+
+  type Props = {
+    currentUser: User,
+    logIn: Function
+  }
+
+  type State = {
+    loadingVisible: boolean
+  }
 
   class WithAuthorization extends Component {
+
+    props: Props;
+    state: State;
+    fbLogIn: Function;
 
     constructor() {
       super();

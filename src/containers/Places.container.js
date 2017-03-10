@@ -7,6 +7,8 @@ type Props = {
 }
 
 class PlacesContainer extends Component {
+
+  props: Props;
   
   constructor() {
     super();

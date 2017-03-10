@@ -3,6 +3,9 @@
 type State = User;
 
 const initialState = {
+  name: '',
+  surname: '',
+  profileUrl: '',
   loggedIn: false
 };
 

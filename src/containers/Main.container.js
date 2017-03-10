@@ -8,10 +8,12 @@ import Loading from '../components/Loading/Loading.component';
 
 type Props = {
   children: any,
-  injectFbSdk: string
+  injectFbSdk: Function
 }
 
 class AppContainer extends Component {
+
+  props: Props;
 
   constructor() {
     super();
