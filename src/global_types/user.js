@@ -1,8 +1,10 @@
 declare type User = {
   id?: number,
-  name: string,
-  surname: string,
-  profileUrl: string,
+  first_name: string,
+  last_name: string,
+  link: string,
+  gender: string,
+  imgUrl: string,
   loggedIn: boolean
 };
 

@@ -13,3 +13,11 @@ export const logOut = (): Object => {
     type: LOG_OUT
   }
 };
+
+const UPDATE_CURRENT_USER = 'UPDATE_CURRENT_USER';
+export const updateCurrentUser = (newUser: User): Object => {
+  return {
+    type: UPDATE_CURRENT_USER,
+    newUser: newUser
+  }
+};

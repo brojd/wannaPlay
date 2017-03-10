@@ -19,7 +19,11 @@ class NavUserContainer extends Component {
 
   render() {
     return (
-      this.props.currentUser.loggedIn ? <NavUser /> : <span></span>
+      this.props.currentUser.loggedIn ?
+        <NavUser imgUrl={this.props.currentUser.imgUrl}
+                 name={this.props.currentUser.first_name}
+                 surname={this.props.currentUser.last_name}/> :
+        <span></span>
     )
   }
 }
