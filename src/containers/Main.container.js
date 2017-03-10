@@ -4,9 +4,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFbSdkReady } from '../selectors/facebook';
 import { injectFbSdk } from '../actions/async';
+import Loading from '../components/Loading/Loading.component';
 
 type Props = {
-  children: any
+  children: any,
+  injectFbSdk: string
 }
 
 class AppContainer extends Component {
@@ -21,9 +23,9 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <div>
-        {this.props.fbSdkReady ? this.props.children : 'loading'}
-      </div>
+      <main>
+        {this.props.fbSdkReady ? this.props.children : <Loading />}
+      </main>
     )
   }
 }
