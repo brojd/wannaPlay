@@ -16,7 +16,7 @@ export const saveUserInfo = (): Function => {
   return (dispatch): void => {
     window.FB.api(
       '/me?fields=id,first_name,last_name,gender,location,link',
-      (user) => { debugger; dispatch(updateCurrentUser(user)) }
+      (user) => dispatch(updateCurrentUser(user))
     )
   }
 };
