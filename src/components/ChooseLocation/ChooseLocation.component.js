@@ -10,14 +10,13 @@ type Props = {
 }
 
 const ChooseLocation = ({ currentLocation, allLocations, onLocationChosen }: Props) => {
-
-  console.log(currentLocation);
-  console.log(allLocations);
-  console.log(onLocationChosen);
   return (
-    <div className={styles.ChooseLocation}>
-      choose location
-    </div>
+    <select className={styles.ChooseLocation} value={currentLocation} onChange={onLocationChosen}>
+      {
+        allLocations.map((location, index) =>
+          <option value={location} key={index}>{location}</option>)
+      }
+    </select>
   )
 };
 
