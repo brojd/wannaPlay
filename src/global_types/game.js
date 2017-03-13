@@ -1,8 +1,16 @@
+declare type GameType = {
+  id: number,
+  name: string,
+  imgUrl: string
+};
+
+declare type GameTypes = Array<GameType>;
+
 declare type Game = {
   _id: string,
   city: string,
   address: string,
-  imgUrl: string,
+  gameTypeId: number,
   level: string,
   maxNbOfPlayers: number,
   description: string,
