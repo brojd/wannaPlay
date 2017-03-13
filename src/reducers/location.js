@@ -1,6 +1,8 @@
 /* @flow */
 
-type State = Location;
+type State = {
+  currentLocation: Location
+};
 
 const initialState = {
   currentLocation: ''

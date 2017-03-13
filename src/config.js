@@ -6,5 +6,6 @@ module.exports = {
   FB_GRAPH_API_URL: 'graph.facebook.com',
   allLocations: allLocations,
   defaultLocation: 'Warszawa',
-  gameTypes: gameTypes
+  gameTypes: gameTypes,
+  defaultGameType: gameTypes[0]
 };
