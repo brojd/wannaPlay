@@ -42,7 +42,7 @@ const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
           this.props.saveUserPicture();
           this.props.logIn();
         }
-      })
+      }, {scope: 'user_location'})
     }
 
     componentDidMount() {

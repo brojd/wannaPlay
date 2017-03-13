@@ -5,7 +5,11 @@ declare type User = {
   link: string,
   gender: string,
   imgUrl: string,
-  loggedIn: boolean
+  loggedIn: boolean,
+  location: {
+    id: string,
+    name: string
+  }
 };
 
 declare type Users = Array<User>;

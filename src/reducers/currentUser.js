@@ -8,7 +8,11 @@ const initialState = {
   link: '',
   imgUrl: '',
   gender: '',
-  loggedIn: false
+  loggedIn: false,
+  location: {
+    id: '',
+    name: ''
+  }
 };
 
 const currentUser = (state: State = initialState, action: Object): State => {
