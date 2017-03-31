@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ChooseGameContainer from './ChooseGame.container';
 
 type Props = {
 }
@@ -15,13 +16,13 @@ class AllEventsContainer extends Component {
   }
 
   componentDidMount() {
-    console.log(window.FB);
   }
   
   render() {
     return (
       <div>
-         AllEvents container
+        <ChooseGameContainer />
+        allEvents container
       </div>
     )
   }

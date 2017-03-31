@@ -40,7 +40,7 @@ const Authorization = (WrappedComponent: ReactClass<any>): ReactClass<any> => {
         if (res.status === 'connected') {
           this.props.saveUserInfo();
           this.props.saveUserPicture();
-          this.props.logIn();
+          window.setTimeout(this.props.logIn, 200);
         }
       }, {scope: 'user_location'})
     }

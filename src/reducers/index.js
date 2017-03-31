@@ -4,13 +4,17 @@ import users from './users';
 import places from './places';
 import facebook from './facebook';
 import currentUser from './currentUser';
+import location from './location';
+import gameType from './gameType';
 
 const wannaPlayApp = combineReducers({
   games,
   users,
   places,
   facebook,
-  currentUser
+  currentUser,
+  location,
+  gameType
 });
 
 export default wannaPlayApp;
