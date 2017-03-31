@@ -1,3 +1,1 @@
-declare type Location = {
-  currentLocation: string
-};
+declare type Location = string;
