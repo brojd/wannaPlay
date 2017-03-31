@@ -1,0 +1,15 @@
+.ChooseGame {
+  display: flex;
+  justify-content: space-around;
+  text-align: center; }
+
+.gameType {
+  width: 100px;
+  padding: 10px 0; }
+  .gameType:hover {
+    background: #f5ffe9;
+    cursor: pointer; }
+  .gameType.currentGameType {
+    background: #d2cfe8; }
+
+/*# sourceMappingURL=ChooseGame.stylesheet.css.map */

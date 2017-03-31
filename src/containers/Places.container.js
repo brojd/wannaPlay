@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 type Props = {
 }
 
-class SearchOnLiContainer extends Component {
+class PlacesContainer extends Component {
+
+  props: Props;
   
   constructor() {
     super();
@@ -15,7 +17,7 @@ class SearchOnLiContainer extends Component {
   render() {
     return (
       <div>
-        LinkedIn container
+        places container
       </div>
     )
   }
@@ -29,4 +31,4 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchOnLiContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(PlacesContainer);
